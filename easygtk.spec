@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://www.linsupport.com/sw/%{name}-%{version}.tar
+# Source0-md5:	81051bcc2cf1bedf378224b0a93e2877
 Patch0:		%{name}-Makefile.patch
 BuildRequires:	gtk+
 BuildRequires:	imlib-devel
