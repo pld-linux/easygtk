@@ -19,7 +19,6 @@ BuildRequires:	zlib-devel
 URL:		http://www.linsupport.com/sw/easygtk.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 EasyGTK is a wrapper library around GTK+ library to provide a much
