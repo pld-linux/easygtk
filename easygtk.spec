@@ -51,8 +51,6 @@ install libeasygtk.a $RPM_BUILD_ROOT%{_libdir}
 install easygtk.so $RPM_BUILD_ROOT%{_libdir}/libeasygtk.so.%{version}
 install easygtk.h $RPM_BUILD_ROOT%{_includedir}
 
-gzip -9nf README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -61,7 +59,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc manual.html README.gz example.c testtree.c
+%doc manual.html README example.c testtree.c
 %attr(644,root,root) %{_includedir}/easygtk.h
 %attr(755,root,root) %{_libdir}/libeasygtk.a
 %attr(755,root,root) %{_libdir}/libeasygtk.so.%{version}
