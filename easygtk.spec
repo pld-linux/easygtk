@@ -3,10 +3,11 @@ Summary(pl):	EasyGTK - nadzbiór funkcji GTK+
 Name:		easygtk
 Version:	1.1.6
 Release:	1
-Copyright:	GPL
+License:	GPL
 Group:		Libraries
+Group(fr):	Librairies
 Group(pl):	Biblioteki
-Source:		http://www.linsupport.com/sw/%{name}-%{version}.tar
+Source0:	http://www.linsupport.com/sw/%{name}-%{version}.tar
 Patch0:		easygtk-Makefile.patch
 BuildRequires:	gtk+
 BuildRequires:	imlib-devel
@@ -24,11 +25,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 EasyGTK is a wrapper library around GTK+ library to provide a much
-easier and simplier Application Programming Interface to the developer.
+easier and simplier Application Programming Interface to the
+developer.
 
 %description -l pl
-EasyGTK jest nadzbiorem funkcji GTK+ pozwalaj±cym na szybsze i ³atwiejsze
-tworzenie aplikacji u¿ywaj±cych Graficznego Interfejsu U¿ytkownika.
+EasyGTK jest nadzbiorem funkcji GTK+ pozwalaj±cym na szybsze i
+³atwiejsze tworzenie aplikacji u¿ywaj±cych Graficznego Interfejsu
+U¿ytkownika.
 
 %prep
 %setup -q -n %{name}
