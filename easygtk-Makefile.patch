@@ -1,0 +1,24 @@
+--- Makefile.libdep.org	Wed Dec 22 19:26:33 1999
++++ Makefile.libdep	Wed Mar 22 12:06:52 2000
+@@ -4,7 +4,10 @@
+ 	$(CC) $(CFLAGS) -c easygtk.c
+ 	ar rc libeasygtk.a easygtk.o
+ 	ranlib libeasygtk.a
+-
++	
++easygtk.so:
++	$(CC) $(CFLAGS) -shared -o $@ easygtk.c
++	
+ install:
+ 	cp libeasygtk.a /usr/lib/libeasygtk.a
+ 	cp easygtk.h /usr/include/easygtk.h
+--- configure.org	Thu Dec 23 22:34:59 1999
++++ configure	Wed Mar 22 11:58:01 2000
+@@ -39,6 +39,7 @@
+ # output creation
+ echo "Creating Makefile"
+ echo -n "CFLAGS = " > Makefile
++echo -n "\$(RPM_OPT_FLAGS) " >> Makefile
+ cat .libdep.cflags >> Makefile
+ echo "" >> Makefile
+ echo -n "LIBS = " >> Makefile
