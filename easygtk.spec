@@ -1,12 +1,12 @@
 Summary:	EasyGTK - GTK+ wrapper library
 Summary(pl):	EasyGTK - nadzbiór funkcji GTK+
 Name:		easygtk
-Version:	1.1.6
+Version:	1.2
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	%{name}-%{version}.tar
-# Source0-md5:	9a71fbf455887b459a10ae46b6eebfca
+# Source0-md5:	04bf9844bed30d34c6e6cb6416cadced
 Patch0:		%{name}-Makefile.patch
 BuildRequires:	gtk+
 BuildRequires:	imlib-devel
