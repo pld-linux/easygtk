@@ -40,10 +40,10 @@ U¿ytkownika.
 
 %build
 ./configure
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 
 # make shared library
-make easygtk.so
+%{__make} easygtk.so
 
 %install
 rm -rf $RPM_BUILD_ROOT
