@@ -8,17 +8,16 @@ Group:		Libraries
 Source0:	%{name}-%{version}.tar
 # Source0-md5:	04bf9844bed30d34c6e6cb6416cadced
 Patch0:		%{name}-Makefile.patch
-BuildRequires:	gtk+
-BuildRequires:	imlib-devel
 BuildRequires:	ImageMagick-devel
 BuildRequires:	XFree86-devel
 BuildRequires:	glib-devel
+BuildRequires:	gtk+
+BuildRequires:	imlib-devel
+BuildRequires:	libjpeg-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	libungif-devel
-BuildRequires:	libjpeg-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 EasyGTK is a wrapper library around GTK+ library to provide a much
@@ -32,7 +31,6 @@ U¿ytkownika.
 
 %prep
 %setup -q -n %{name}
-
 %patch
 
 %build
@@ -53,8 +51,8 @@ install easygtk.h $RPM_BUILD_ROOT%{_includedir}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
