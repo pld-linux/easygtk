@@ -48,5 +48,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc manual.html example.c testtree.c
-%attr(644,root,root) %{_includrdir}/easygtk.h
+%attr(644,root,root) %{_includedir}/easygtk.h
 %attr(755,root,root) %{_libdir}/libeasygtk.a
