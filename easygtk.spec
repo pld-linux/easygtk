@@ -28,7 +28,7 @@ easier and simplier Application Programming Interface to the developer.
 
 %description -l pl
 EasyGTK jest nadzbiorem funkcji GTK+ pozwalaj±cym na szybsze i ³atwiejsze
-tworzenie aplikacju u¿ywaj±cych Graficznegi Interfejsu U¿ytkownika.
+tworzenie aplikacji u¿ywaj±cych Graficznego Interfejsu U¿ytkownika.
 
 %prep
 %setup -q -n %{name}
