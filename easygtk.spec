@@ -5,10 +5,12 @@ Version:	1.1.6
 Release:	1
 License:	GPL
 Group:		Libraries
+Group(de):	Libraries
+Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
 Source0:	http://www.linsupport.com/sw/%{name}-%{version}.tar
-Patch0:		easygtk-Makefile.patch
+Patch0:		%{name}-Makefile.patch
 BuildRequires:	gtk+
 BuildRequires:	imlib-devel
 BuildRequires:	ImageMagick-devel
@@ -21,7 +23,7 @@ BuildRequires:	zlib-devel
 URL:		http://www.linsupport.com/sw/easygtk.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define	_prefix	/usr/X11R6
+%define		_prefix		/usr/X11R6
 
 %description
 EasyGTK is a wrapper library around GTK+ library to provide a much
@@ -40,7 +42,7 @@ U¿ytkownika.
 
 %build
 ./configure
-%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+%{__make} RPM_OPT_FLAGS="%{rpmcflags}"
 
 # make shared library
 %{__make} easygtk.so
@@ -49,8 +51,8 @@ U¿ytkownika.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_libdir},%{_includedir}}
 
-install -s libeasygtk.a $RPM_BUILD_ROOT%{_libdir}
-install -s easygtk.so $RPM_BUILD_ROOT%{_libdir}/libeasygtk.so.%{version}
+install libeasygtk.a $RPM_BUILD_ROOT%{_libdir}
+install easygtk.so $RPM_BUILD_ROOT%{_libdir}/libeasygtk.so.%{version}
 install easygtk.h $RPM_BUILD_ROOT%{_includedir}
 
 gzip -9nf README
