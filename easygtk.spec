@@ -8,7 +8,7 @@ Group:		Libraries
 Group(pl):	Biblioteki
 Source:		http://www.linsupport.com/sw/%{name}-%{version}.tar
 #Patch:		
-BuildRequires:	gtk+ >=1.2
+BuildRequires:	gtk+
 BuildRequires:	imlib-devel
 BuildRequires:	ImageMagick-devel
 BuildRequires:	XFree86-devel
