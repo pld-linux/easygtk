@@ -5,8 +5,8 @@ Version:	1.1.6
 Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://www.linsupport.com/sw/%{name}-%{version}.tar
-# Source0-md5:	81051bcc2cf1bedf378224b0a93e2877
+Source0:	%{name}-%{version}.tar
+# Source0-md5:	9a71fbf455887b459a10ae46b6eebfca
 Patch0:		%{name}-Makefile.patch
 BuildRequires:	gtk+
 BuildRequires:	imlib-devel
@@ -17,7 +17,6 @@ BuildRequires:	libtiff-devel
 BuildRequires:	libungif-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	zlib-devel
-URL:		http://www.linsupport.com/sw/easygtk.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
