@@ -5,13 +5,6 @@ Version:	1.1.6
 Release:	1
 License:	GPL
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 Source0:	http://www.linsupport.com/sw/%{name}-%{version}.tar
 Patch0:		%{name}-Makefile.patch
 BuildRequires:	gtk+
