@@ -18,7 +18,7 @@ BuildRequires:	libungif-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	zlib-devel
 URL:		http://www.linsupport.com/sw/easygtk.html
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define	_prefix	/usr/X11R6
 
