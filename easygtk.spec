@@ -10,12 +10,12 @@ Source0:	%{name}-%{version}.tar
 Patch0:		%{name}-Makefile.patch
 BuildRequires:	ImageMagick-devel
 BuildRequires:	XFree86-devel
+BuildRequires:	giflib-devel
 BuildRequires:	glib-devel
-BuildRequires:	gtk+
+BuildRequires:	gtk+-devel
 BuildRequires:	imlib-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libtiff-devel
-BuildRequires:	libungif-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -57,6 +57,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc manual.html README example.c testtree.c
-%attr(644,root,root) %{_includedir}/easygtk.h
-%attr(755,root,root) %{_libdir}/libeasygtk.a
 %attr(755,root,root) %{_libdir}/libeasygtk.so.%{version}
+%{_libdir}/libeasygtk.a
+%{_includedir}/easygtk.h
