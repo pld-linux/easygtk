@@ -1,5 +1,5 @@
 Summary:	EasyGTK - GTK+ wrapper library
-Summary(pl.UTF-8):   EasyGTK - nadzbiór funkcji GTK+
+Summary(pl.UTF-8):	EasyGTK - nadzbiór funkcji GTK+
 Name:		easygtk
 Version:	1.2
 Release:	1
